@@ -1,1 +1,79 @@
-
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>موسوعة أعلام قبائل اليمن</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Tahoma,Arial;background:#f5f3ed;color:#172b3a}
+header{background:#092b46;color:white;text-align:center;padding:35px 15px}
+header h1{color:#e9bd69}
+nav{background:#123b59;padding:15px;text-align:center}
+nav a{color:white;text-decoration:none;margin:9px}
+main{max-width:950px;margin:25px auto;padding:15px}
+section{background:white;padding:22px;margin:18px 0;border-radius:14px;box-shadow:0 2px 9px #ddd}
+h2{color:#123b59}
+input{width:100%;padding:14px;border:1px solid #bbb;border-radius:8px;font-size:16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.card{background:#fff;border:1px solid #ddd;padding:18px;border-radius:10px}
+footer{background:#092b46;color:white;text-align:center;padding:25px}
+</style>
+</head>
+<body>
+<header>
+<h1>موسوعة أعلام قبائل اليمن</h1>
+<p>مرجع لتوثيق القبائل والشخصيات والتاريخ اليمني</p>
+</header>
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#tribes">القبائل</a>
+<a href="#people">الأعلام</a>
+<a href="#regions">المحافظات</a>
+</nav>
+<main>
+<section id="home">
+<h2>أهلاً بكم في الموسوعة</h2>
+<p>منصة معرفية لتوثيق تاريخ القبائل اليمنية وأعلامها من المشايخ والوجهاء والعلماء والأدباء والشخصيات التاريخية، اعتماداً على المصادر والمراجع.</p>
+</section>
+<section>
+<h2>ابحث في الموسوعة</h2>
+<input id="search" placeholder="اكتب اسم القبيلة أو الشخصية أو المحافظة..." oninput="findItems()">
+<div id="results"></div>
+</section>
+<section id="tribes">
+<h2>القبائل اليمنية</h2>
+<div class="cards">
+<div class="card">قبائل صنعاء</div>
+<div class="card">قبائل مأرب</div>
+<div class="card">قبائل الجوف</div>
+<div class="card">قبائل تعز</div>
+<div class="card">قبائل حضرموت</div>
+<div class="card">قبائل شبوة</div>
+<div class="card">قبائل صعدة</div>
+<div class="card">قبائل البيضاء</div>
+</div>
+<p>هذه أقسام أولية، وستضاف سجلات القبائل وفروعها بعد توثيق المعلومات.</p>
+</section>
+<section id="people">
+<h2>أعلام وشخصيات القبائل</h2>
+<p>سيتم إضافة الشخصيات وسيرها بعد التحقق من المعلومات والمصادر.</p>
+</section>
+<section id="regions">
+<h2>المحافظات اليمنية</h2>
+<div class="cards">
+<div class="card">صنعاء</div><div class="card">تعز</div><div class="card">مأرب</div><div class="card">الجوف</div><div class="card">عمران</div><div class="card">صعدة</div><div class="card">إب</div><div class="card">ذمار</div><div class="card">البيضاء</div><div class="card">شبوة</div><div class="card">حضرموت</div><div class="card">أبين</div><div class="card">لحج</div><div class="card">الضالع</div><div class="card">عدن</div><div class="card">المهرة</div><div class="card">سقطرى</div><div class="card">حجة</div><div class="card">الحديدة</div><div class="card">ريمة</div><div class="card">المحويت</div>
+</div>
+</section>
+</main>
+<footer>موسوعة أعلام قبائل اليمن<br>مشروع توثيقي معرفي مجتمعي</footer>
+<script>
+const items=[];
+function findItems(){
+let q=document.getElementById('search').value.trim();
+let r=document.getElementById('results');
+r.innerHTML=q?'<p>لا توجد سجلات موثقة مطابقة حالياً. ستضاف البيانات بعد مراجعتها.</p>':'';
+}
+</script>
+</body>
+</html>
